@@ -32,12 +32,12 @@ export default function Root () {
       <Router history={browserHistory}>
         <Route path="/" component={App} onEnter={onAppEnter}>
         <Route path="api/">
-            <Route path="campus" component={Campuses}/>
-            <Route path="students" component={Students}/>
+            <Route path="/campuses" component={Campuses}/>
+            <Route path="/students" component={Students}/>
           </Route>
           <Route path="/campus/:id" component={SingleCampus}/>
           <Route path="/addStudent" component={AddStudent}/>
-          <IndexRedirect to="/albums"/>
+          <IndexRedirect to="/"/>
         </Route>
       </Router>
   );

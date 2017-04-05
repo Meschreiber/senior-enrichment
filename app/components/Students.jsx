@@ -1,0 +1,1 @@
+// Displays all students, theirid, and campus plus a delete student button
