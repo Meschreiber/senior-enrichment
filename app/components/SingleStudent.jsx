@@ -35,7 +35,7 @@ export default function SingleStudent(props) {
                         <div className="col-xs-10">
                             <select>
                                 {
-                                    campuses.map(campus => (
+                                    campus.map(campus => (
                                         <option key={campus.id} value={campus.name}>{campus.name}</option>
                                     ))
                                 }

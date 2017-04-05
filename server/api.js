@@ -19,10 +19,10 @@ router.get('/hello', (req, res) => res.send({hello: 'world'}))
 // Routes
 
 // GET 
-// - all campuses
-router.get('/campuses', function (req, res, next) {
+// - all campus
+router.get('/campus', function (req, res, next) {
 	Campus.findAll()
-	.then(campuses => res.json(campuses))
+	.then(campus => res.json(campus))
 	.catch(next)
 })
 
@@ -43,7 +43,7 @@ router.param('campusId', function(req, res, next, id){
 })
 
 // - a campus by id
-router.get('/campuses/:id', function (req, res,) {
+router.get('/campus/:id', function (req, res) {
 	res.json(req.campus)
 })
 
@@ -78,7 +78,7 @@ router.get('/students/:id', function (req, res) {
 
 // POST
 // - new campus
-router.post('/campuses', function (req, res, next) {
+router.post('/campus', function (req, res, next) {
 	Campus.create(req.body)
 	.then(newCampus => res.json(newCampus))
 	.catch(next)
@@ -98,14 +98,14 @@ router.put('/students/:id', function (req, res) {
 	res.sendStatus(204)
 })
 // - updated campus info for one campus
-router.put('/campuses/:id', function (req, res) {
+router.put('/campus/:id', function (req, res) {
 	req.campus.update(req.body)
 	res.sendStatus(204)
 })
 
 // DELETE
 // - a campus
-router.delete('/campuses/:id', function (req, res) {
+router.delete('/campus/:id', function (req, res) {
 	req.student.destroy()
 	res.sendStatus(204)
 	// hook to delete all attached students?

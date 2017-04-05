@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function AddStudent(props) {
 
-    const campuses = props.campuses
+    const campus = props.campus
     const handleChange = props.handleChange;
     const handleSubmit = props.handleSubmit;
     const inputValue = props.inputValue;
@@ -31,7 +31,7 @@ export default function AddStudent(props) {
                         <div className="col-xs-10">
                             <select>
                                 {
-                                    campuses.map(campus => (
+                                    campus.map(campus => (
                                         <option key={campus.id} value={campus.name}>{campus.name}</option>
                                     ))
                                 }

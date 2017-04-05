@@ -2,13 +2,13 @@
 // The data can then be loaded with the node seed.js
 
 var Promise = require('bluebird');
-var db = require('./db/models');
+var db = require('./db');
 var Student = require('./db/models/student');
 var Campus = require('./db/models/campus');
 
 
 var data = {
-    campus: [
+    campuses: [
         {
             name: "Earth",
             imageUrl: "http://solarviews.com/raw/earth/bluemarblewest.jpg",
@@ -30,7 +30,7 @@ var data = {
             blurb: "The Borg Collective was the term used to define the collective intelligence comprising all members linked together into a hive mind via subspace transceivers and calling themselves the Borg. It was the de facto governing power, as the term was considered by individuals, over all Borg civilization."
         },
     ],
-    student: [
+    users: [
         {
             name: "Jean-Luc Picard",
             email: "thecapn@gmail.com",
@@ -70,29 +70,24 @@ var data = {
     ]
 };
 
-// db.sync({ force: true })
-//     .then(function () {
-//         console.log("Dropped old data, now inserting data");
-//         return Promise.map(Object.keys(data), function (name) {
-//             return Promise.map(data[name], function (item) {
-//                 return db.model(name)
-//                     .create(item, {
-//                         include: [Place]
-//                     });
-//             });
-//         });
-//     })
-//     .then(function () {
-//         return Day.create({ number: 1 });
-//     })
-//     .then(function () {
-//         console.log("Finished inserting data");
-//     })
-//     .catch(function (err) {
-//         console.error('There was totally a problem', err, err.stack);
-//     })
-//     .finally(function () {
-//         db.close() // uses promises but does not return a promise. https://github.com/sequelize/sequelize/pull/5776
-//         console.log('connection closed'); // the connection eventually closes, we just manually do so to end the process quickly
-//         return null; // silences bluebird warning about using non-returned promises inside of handlers.
-//     });
+db.sync({ force: true })
+    .then(function () {
+        console.log("Dropped old data, now inserting data");
+        return Promise.map(Object.keys(data), function (name) {
+            return Promise.map(data[name], function (item) {
+                return db.model(name)
+                    .create(item)
+                    });
+            });
+    })
+    .then(function () {
+        console.log("Finished inserting data");
+    })
+    .catch(function (err) {
+        console.error('There was totally a problem', err, err.stack);
+    })
+    .finally(function () {
+        db.close() // uses promises but does not return a promise. https://github.com/sequelize/sequelize/pull/5776
+        console.log('connection closed'); // the connection eventually closes, we just manually do so to end the process quickly
+        return null; // silences bluebird warning about using non-returned promises inside of handlers.
+    });

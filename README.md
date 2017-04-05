@@ -16,7 +16,7 @@ Make a thing!
 
 ### The Premise
 
-You are the CTO of the Margaret Hamilton Interplanetary Academy of JavaScript. Create a RESTful web platform that allows you to manage your students and campuses.
+You are the CTO of the Margaret Hamilton Interplanetary Academy of JavaScript. Create a RESTful web platform that allows you to manage your students and campus.
 
 ### The tools
 
@@ -28,7 +28,7 @@ Use at least sequelize, express, react, and redux when creating this app. You ca
   * have profile info (e.g. name and email)
   * must be assigned to a campus
 
-- Campuses
+- campus
   * have info such as a name and image
   * can have many students assigned (may have none)
   
@@ -37,15 +37,15 @@ Use at least sequelize, express, react, and redux when creating this app. You ca
 
 - Navigation: as a user I...
   * will land on **Home** by default
-  * can navigate to **Campuses** from **Home**
+  * can navigate to **campus** from **Home**
   * can navigate to **Students** from **Home**
-  * can navigate to view a **Single Campus** from **Campuses**
+  * can navigate to view a **Single Campus** from **campus**
   * can navigate to view a **Single Student** from **Students**
-  * can navigate to view a **Single Student** from **Campuses** (for any student at that campus)
+  * can navigate to view a **Single Student** from **campus** (for any student at that campus)
   * can navigate to view that student's **Single Campus** from **Single Student**
 
 - Views: as a user I...
-  * see a list of all campuses on the **Campuses** view
+  * see a list of all campus on the **campus** view
   * see a list of all students on the **Students** view
   * see details about a campus on the **Single Campus** view, including that campus's students
   * see details about a student on the **Single Student** view, including that student's campus
@@ -62,7 +62,7 @@ Use at least sequelize, express, react, and redux when creating this app. You ca
 
 ```
 GET 
-- all campuses
+- all campus
 - a campus by id
 - all students
 - a student by id
