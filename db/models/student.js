@@ -13,9 +13,8 @@ module.exports = db.define('student', {
       isEmail: true
     }
   },
-  // campus: {
-  //   type: Sequelize.STRING
-  // }
-  // change to ENUM based on campuses that exist?
+  testimonial: {
+    type: Sequelize.TEXT
+  }
 })
 

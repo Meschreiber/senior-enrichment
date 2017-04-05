@@ -34,26 +34,37 @@ var data = {
         {
             name: "Jean-Luc Picard",
             email: "thecapn@gmail.com",
+            testimonial: "Tea. Earl Grey. Hot."
         },
         {
             name: "Worf",
             email: "klingons4eva@gmail.com",
+            testimonial: "I am not concerned with pleasure, Commander, I am a warrior."
         },
         {
             name: "Commander Riker",
             email: "thebeard@bearded.com",
+            testimonial: "Margaret Hamilton Interplanetary Academy of JS is smooth as an android's bottom."
+        },
+        {
+            name: "Data",
+            email: "9230238@gmail.com",
+            testimonial: "I am not capable of love, but my programming finds MHIAJS very pleasing."
         },
         {
             name: "Seven of Nine",
             email: "36ofD@gmail.com",
+            testimonial: "This school can alleviate your ignorance."
         },
         {
             name: "Kathryn Janeway",
             email: "therealcapn@gmail.com",
+            testimonial: "They really go the extra lightyear."
         },
         {
             name: "Spock",
             email: "CatLove@gmail.com",
+            testmonial: "Change is the essential process of all existence."
         },
 
     ]
