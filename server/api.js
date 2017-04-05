@@ -1,8 +1,8 @@
 'use strict'
 const router = require('express').Router()
 const db = require('../db')
-const Student = db.Student
-const Campus = db.Campus
+const Student = require('../db/models/student')
+const Campus = require('../db/models/campus')
 
 
 // If you aren't getting to this object, but rather the index.html (something with a joke) your path is wrong.
@@ -43,7 +43,7 @@ router.param('campusId', function(req, res, next, id){
 })
 
 // - a campus by id
-router.get('/campus/:id', function (req, res) {
+router.get('/campus/:campusId', function (req, res) {
 	res.json(req.campus)
 })
 
@@ -72,7 +72,7 @@ router.param('studentId', function(req, res, next, id){
 
 
 // - a student by id
-router.get('/students/:id', function (req, res) {
+router.get('/students/:studentId', function (req, res) {
 	res.json(req.student)
 })
 
@@ -93,26 +93,26 @@ router.post('/student', function (req, res, next) {
 
 // PUT
 // - updated student info for one student
-router.put('/students/:id', function (req, res) {
+router.put('/students/:studentId', function (req, res) {
 	req.student.update(req.body)
 	res.sendStatus(204)
 })
 // - updated campus info for one campus
-router.put('/campus/:id', function (req, res) {
+router.put('/campus/:campusId', function (req, res) {
 	req.campus.update(req.body)
 	res.sendStatus(204)
 })
 
 // DELETE
 // - a campus
-router.delete('/campus/:id', function (req, res) {
+router.delete('/campus/:campusId', function (req, res) {
 	req.student.destroy()
 	res.sendStatus(204)
 	// hook to delete all attached students?
 })
 
 // - a student
-router.delete('/students/:id', function (req, res) {
+router.delete('/students/:studentId', function (req, res) {
 	req.student.destroy()
 	res.sendStatus(204)
 })
