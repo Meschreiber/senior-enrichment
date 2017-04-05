@@ -5,10 +5,10 @@ import axios from 'axios';
 import store from './store';
 
 import App from './components/App';
-import campus from './components/campus';
-import Students from './components/Students';
-import SingleCampus from './components/SingleCampus';
-import AddStudent from './components/AddStudent';
+import CampusesContainer from './containers/CampusesContainer';
+// import Students from './components/Students';
+// import SingleCampus from './components/SingleCampus';
+// import AddStudent from './components/AddStudent';
 
 import { receiveCampuses, receiveStudents } from './action-creators/index';
 
@@ -32,7 +32,7 @@ const onAppEnter = () => {
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App} onEnter={onAppEnter}>
-      <Route path="/campus" component={campus} />
+      <Route path="/campus" component={CampusesContainer} />
       {/*<Route path="/students" component={Students} />
       <Route path="/campus/:id" component={SingleCampus} />
       <Route path="/addStudent" component={AddStudent} />*/}

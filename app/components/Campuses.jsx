@@ -2,12 +2,12 @@ import React from 'react';
 import {Link} from 'react-router';
 
 export default function campus (props) {
+  const campuses = props.campus;
+  console.log('From campus component', campuses)
 
-  const campus = props.campus;
-  console.log('From campus component', props)
   return (
     <div>
-      <h3>Our campus</h3>
+      <h3>Our campuses</h3>
       <div className="row">
         {
           campus && campus.map(campus => (
