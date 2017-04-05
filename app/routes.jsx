@@ -35,7 +35,7 @@ export default function Root () {
             <Route path="/campuses" component={Campuses}/>
             <Route path="/students" component={Students}/>
           </Route>
-          <Route path="/campus/:id" component={SingleCampus}/>
+          <Route path="/campuses/:id" component={SingleCampus}/>
           <Route path="/addStudent" component={AddStudent}/>
           <IndexRedirect to="/"/>
         </Route>

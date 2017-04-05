@@ -9,5 +9,8 @@ module.exports = db.define('campus', {
   },
   imageUrl: {
     type: Sequelize.STRING
+  },
+  blurb: {
+    type: Sequelize.TEXT,
   }
 })
