@@ -6,7 +6,9 @@ class SingleCampusContainer extends Component {
 
   constructor(props) {
     super(props);
-    this.state = Object.assign({}, store.getState(), {selectedCampus: store.getState().campuses[this.props.params.id] });
+    this.state = Object.assign({}, store.getState(), 
+    {selectedCampus: store.getState().campuses[this.props.params.id - 1], selectedStudents: store.getState().students
+    .filter(student => student.campusId === this.props.params.id - 1)});
     console.log('SingleCampusContainer', this.state)
   }
 
@@ -22,7 +24,7 @@ class SingleCampusContainer extends Component {
   }
 
   render() {
-    return <SingleCampus campus={this.state.selectedCampus} students={this.state.students}/>;
+    return <SingleCampus campus={this.state.selectedCampus} students={this.state.selectedStudents}/>;
   }
 
 }

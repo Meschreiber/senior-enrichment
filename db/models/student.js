@@ -16,5 +16,8 @@ module.exports = db.define('users', {
   testimonial: {
     type: Sequelize.TEXT
   }
+  // campusId: {
+  //   type: Sequelize.INTEGER
+  // }
 })
 
