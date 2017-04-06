@@ -6,7 +6,9 @@ import { Link } from 'react-router';
 
 export default function SingleCampus(props) {
 
-    const campus = props.selectedCampus;
+    const campus = props.campus;
+    // will eventually have to filter based on the campus
+    const students = props.students;
 
     return (
         <div>
@@ -18,7 +20,7 @@ export default function SingleCampus(props) {
                 </div>
             </div>
             {
-                campus.students.map(student => (
+                students.map(student => (
                     <div className="list-group-item" key={student.id}>
                         <Link to={`/students/${student.id}`}>{student.name}</Link>
                     </div>

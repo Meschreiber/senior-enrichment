@@ -3,7 +3,6 @@ import {Link} from 'react-router';
 
 export default function campus (props) {
   const campuses = props.campuses;
-  console.log('From campus component', campuses)
 
   return (
     <div>

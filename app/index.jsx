@@ -6,8 +6,9 @@ import store from './store';
 
 import App from './components/App';
 import CampusesContainer from './containers/CampusesContainer';
+import SingleCampusContainer from './containers/SingleCampusContainer';
 import Students from './components/Students';
-import SingleCampus from './components/SingleCampus';
+
 import AddStudent from './components/AddStudent';
 
 import { receiveCampuses, receiveStudents } from './action-creators/index';
@@ -36,11 +37,10 @@ const onAppEnter = () => {
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App} onEnter={onAppEnter}>
-      <Route path="/campus" component={CampusesContainer} >
-        <Route path="/campus/:id" component={SingleCampus} />
-      </Route>
+      <Route path="/campus" component={CampusesContainer} />
+      <Route path="/campus/:id" component={SingleCampusContainer} />
+      {/*</Route>*/}
       <Route path="/students" component={Students} >
-
         <Route path="/addStudent" component={AddStudent} />
       </Route>
       <IndexRedirect to="/campus" />
