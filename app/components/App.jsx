@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 export default function App ({ children }) {
   return (
     <div id="app" className="container-fluid">
-    <h1>The children should show up here.</h1>
+    <h1>Welcome to Margaret Hamilton Interplanetary Academy of JavaScript!</h1>
         { children }
     </div>
   );

@@ -6,12 +6,14 @@ class CampusesContainer extends Component {
 
   constructor() {
     super();
-    this.state = store.getState().campuses;
+    this.state = Object.assign({}, store.getState());
+    
   }
 
   componentDidMount() {
     this.unsubscribe = store.subscribe(() => {
-      this.setState(store.getState().campuses);
+      this.setState(store.getState());
+
     });
   }
 

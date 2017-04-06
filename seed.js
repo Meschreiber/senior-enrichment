@@ -16,17 +16,17 @@ var data = {
         },
         {
             name: "Qo'noS",
-            imageUrl: "http://solarviews.com/raw/earth/bluemarblewest.jpg",
+            imageUrl: "https://hydra-media.cursecdn.com/sto.gamepedia.com/thumb/f/f0/Qo%27noS.jpg/250px-Qo%27noS.jpg?version=2b004fb0c21ca2b121a12b6174561483",
             blurb: "The main capital world of the Klingon Empire. It is also referred to as Kronos (an alternative transliteration), Klinzhai, or Kling. The reference to a native or anything pertaining to the people, 'Klingon,' derives from this last reference."
         },
         {
             name: "Vulcan",
-            imageUrl: "http://solarviews.com/raw/earth/bluemarblewest.jpg",
+            imageUrl: "https://futurism.com/wp-content/uploads/2013/02/200635_414242988662116_1691606020_n.jpg",
             blurb: "A dry, hostile planet in the 40 Eridani A system that is the homeworld of the Vulcan people, who are also known as Vulcanians."
         },
         {
             name: "Borg Collective (Remote)",
-            imageUrl: "http://solarviews.com/raw/earth/bluemarblewest.jpg",
+            imageUrl: "https://s-media-cache-ak0.pinimg.com/236x/91/74/65/9174658fc976d173dd95fb0d245e5bb9.jpg",
             blurb: "The Borg Collective was the term used to define the collective intelligence comprising all members linked together into a hive mind via subspace transceivers and calling themselves the Borg. It was the de facto governing power, as the term was considered by individuals, over all Borg civilization."
         },
     ],
